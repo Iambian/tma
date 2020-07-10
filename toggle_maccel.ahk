@@ -33,12 +33,6 @@ Return
 F11::
 state := !state
 RegWrite,REG_SZ,HKEY_CURRENT_USER,Control Panel\Mouse,MouseSpeed,%state%
-
-if !state {
-	TrayTip,Mouse Precision Enhancement,Enabled,10
-} else {
-	TrayTip,Mouse Precision Enhancement,Disabled,10
-}
 s:= "Changed to [" getaccelstate() "]"
 TrayTip,Mouse Precision Enhancement,%s%,10
 togglestate()
